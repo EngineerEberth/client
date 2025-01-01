@@ -18,7 +18,7 @@ const Pilotos = () => {
 
     const fetchPilotos = async () => {
         try {
-            const response = await axios.get('https://fly-airlines-backend-2.onrender.com/api/pilotos', { withCredentials: true });
+            const response = await axios.get('https://fly-airlines-backend-3.onrender.com/api/pilotos', { withCredentials: true });
             setPilotos(response.data);
         } catch (error) {
             console.error("Error al obtener pilotos:", error.response ? error.response.data : error.message);
@@ -46,9 +46,9 @@ const Pilotos = () => {
         e.preventDefault();
         try {
             if (editing) {
-                await axios.put(`https://fly-airlines-backend-2.onrender.com/api/pilotos/${formData._id}`, formData, { withCredentials: true });
+                await axios.put(`https://fly-airlines-backend-3.onrender.com/api/pilotos/${formData._id}`, formData, { withCredentials: true });
             } else {
-                await axios.post('https://fly-airlines-backend-2.onrender.com/api/pilotos', formData, { withCredentials: true });
+                await axios.post('https://fly-airlines-backend-3.onrender.com/api/pilotos', formData, { withCredentials: true });
             }
             fetchPilotos();
             setFormData({ nombre: '', licencia: '', rango: 'Capitán', nacionalidad: '', horasVuelo: '', experiencia: '', estado: 'Activo' });
@@ -65,7 +65,7 @@ const Pilotos = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://fly-airlines-backend-2.onrender.com/api/pilotos/${id}`, { withCredentials: true });
+            await axios.delete(`https://fly-airlines-backend-3.onrender.com/api/pilotos/${id}`, { withCredentials: true });
             fetchPilotos();
         } catch (error) {
             console.error("Error al eliminar piloto:", error.response ? error.response.data : error.message);

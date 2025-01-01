@@ -18,7 +18,7 @@ const Planes = () => {
 
     const fetchPlanes = async () => {
         try {
-            const response = await axios.get('https://fly-airlines-backend-2.onrender.com/api/aviones', { withCredentials: true });
+            const response = await axios.get('https://fly-airlines-backend-3.onrender.com/api/aviones', { withCredentials: true });
             setPlanes(response.data);
         } catch (error) {
             console.error("Error al obtener aviones:", error.response ? error.response.data : error.message);
@@ -46,9 +46,9 @@ const Planes = () => {
         e.preventDefault();
         try {
             if (editing) {
-                await axios.put(`https://fly-airlines-backend-2.onrender.com/api/aviones/${formData._id}`, formData, { withCredentials: true });
+                await axios.put(`https://fly-airlines-backend-3.onrender.com/api/aviones/${formData._id}`, formData, { withCredentials: true });
             } else {
-                await axios.post('https://fly-airlines-backend-2.onrender.com/api/aviones', formData, { withCredentials: true });
+                await axios.post('https://fly-airlines-backend-3.onrender.com/api/aviones', formData, { withCredentials: true });
             }
             fetchPlanes();
             setFormData({
@@ -73,7 +73,7 @@ const Planes = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://fly-airlines-backend-2.onrender.com/api/aviones/${id}`, { withCredentials: true });
+            await axios.delete(`https://fly-airlines-backend-3.onrender.com/api/aviones/${id}`, { withCredentials: true });
             fetchPlanes();
         } catch (error) {
             console.error("Error al eliminar avión:", error.response ? error.response.data : error.message);

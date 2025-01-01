@@ -18,7 +18,7 @@ const Destinos = () => {
     // Función para obtener destinos
     const fetchDestinos = async () => {
         try {
-            const response = await axios.get('https://fly-airlines-backend-2.onrender.com/api/destinos', {
+            const response = await axios.get('https://fly-airlines-backend-3.onrender.com/api/destinos', {
                 withCredentials: true,
             });
             setDestinos(response.data);
@@ -53,12 +53,12 @@ const Destinos = () => {
         try {
             if (editing) {
                 // Actualizar destino
-                await axios.put(`https://fly-airlines-backend-2.onrender.com/api/destinos/${formData._id}`, formData, {
+                await axios.put(`https://fly-airlines-backend-3.onrender.com/api/destinos/${formData._id}`, formData, {
                     withCredentials: true,
                 });
             } else {
                 // Agregar nuevo destino
-                await axios.post('https://fly-airlines-backend-2.onrender.com/api/destinos', formData, {
+                await axios.post('https://fly-airlines-backend-3.onrender.com/api/destinos', formData, {
                     withCredentials: true,
                 });
             }
@@ -79,7 +79,7 @@ const Destinos = () => {
     // Manejar la eliminación de un destino
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://fly-airlines-backend-2.onrender.com/api/destinos/${id}`, {
+            await axios.delete(`https://fly-airlines-backend-3.onrender.com/api/destinos/${id}`, {
                 withCredentials: true,
             });
             fetchDestinos(); // Actualiza la lista después de eliminar

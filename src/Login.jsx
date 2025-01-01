@@ -30,7 +30,7 @@ function App() {
 
     const handleLogout = async () => {
         try {
-            await axios.post('https://fly-airlines-backend-2.onrender.com/api/logout'); 
+            await axios.post('https://fly-airlines-backend-3.onrender.com/api/logout'); 
             localStorage.removeItem('token'); // Elimina el token del almacenamiento local
             localStorage.removeItem('username'); // Elimina el nombre de usuario del almacenamiento local
             window.location.href = '/'; // Redirige a la página de inicio

@@ -18,7 +18,7 @@ const Clients = () => {
 
     const fetchClients = async () => {
         try {
-            const response = await axios.get('https://fly-airlines-backend-2.onrender.com/api/usuarios', { withCredentials: true });
+            const response = await axios.get('https://fly-airlines-backend-3.onrender.com/api/usuarios', { withCredentials: true });
             setClients(response.data);
         } catch (error) {
             console.error("Error al obtener clientes:", error.response ? error.response.data : error.message);
@@ -46,9 +46,9 @@ const Clients = () => {
         e.preventDefault();
         try {
             if (editing) {
-                await axios.put(`https://fly-airlines-backend-2.onrender.com/api/usuarios/${formData._id}`, formData, { withCredentials: true });
+                await axios.put(`https://fly-airlines-backend-3.onrender.com/api/usuarios/${formData._id}`, formData, { withCredentials: true });
             } else {
-                await axios.post('https://fly-airlines-backend-2.onrender.com/api/usuarios', formData, { withCredentials: true });
+                await axios.post('https://fly-airlines-backend-3.onrender.com/api/usuarios', formData, { withCredentials: true });
             }
             fetchClients();
             setFormData({
@@ -73,7 +73,7 @@ const Clients = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://fly-airlines-backend-2.onrender.com/api/usuarios/${id}`, { withCredentials: true });
+            await axios.delete(`https://fly-airlines-backend-3.onrender.com/api/usuarios/${id}`, { withCredentials: true });
             fetchClients();
         } catch (error) {
             console.error("Error al eliminar cliente:", error.response ? error.response.data : error.message);

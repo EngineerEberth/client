@@ -19,7 +19,7 @@ function Register() {
     setSuccess('');
 
     try {
-      const response = await fetch('https://fly-airlines-backend-2.onrender.com/api/register', {
+      const response = await fetch('https://fly-airlines-backend-3.onrender.com/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),
