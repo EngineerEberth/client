@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+@font-face {
+    font-family: "Latam-sans"; /* Define una fuente personalizada */
+    src: url(./fonts/LatamSans-Regular.otf); /* Ruta de la fuente */
+  }
+  
+body {
+  margin: 0;
+  font-family: "Latam-sans";
+}
+
+.text {
+  color: rgb(23, 23, 87);
+}
+
+.card {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.flex-grow-1 {
+  display: flex;
+}
+.login-body {
+    background-color: #f8f9fa; /* Color de fondo */
+  }
+  
+  .login-card {
+    background-color: white; /* Fondo de la tarjeta de login */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  .text-primary {
+    color: #146ac7; /* Color azul */
+  }
+  
+  .text-primary:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+  }
+
